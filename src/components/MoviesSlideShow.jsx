@@ -1,0 +1,90 @@
+// MoviesSlideShow.jsx - Animated movies carousel component
+import React from 'react';
+import { motion } from "motion/react";
+import { assets } from '../assets/assets';
+
+const MoviesSlideShow = () => {
+  // Array of all movie images with metadata
+  const movieImages = [
+    { src: assets.fairStreet, alt: "Fair Street" },
+    { src: assets.incantation, alt: "Incantation" },
+    { src: assets.lighthouse, alt: "Lighthouse" },
+    { src: assets.lightsout, alt: "Lights Out" },
+    { src: assets.themedium, alt: "The Medium" },
+    { src: assets.thetakingofdeborahlogan, alt: "The Taking of Deborah Logan" },
+    { src: assets.Edgeoftomorrow, alt: "Edge of tomorro" },
+     { src: assets.bosslevel, alt: "boss level" },
+    { src: assets.bladerunner, alt: "bladerunner" },
+    { src: assets.gravity, alt: "gravity" },
+    { src: assets.images, alt: "images" },
+    { src: assets.Readyplayerone, alt: "Ready player one" },
+    { src: assets.themapofperfectthings, alt: "the map of perfect things" },
+    { src: assets.finch, alt: "finch" },
+    { src: assets.Grandturismo, alt: "Grandturismo" },
+    { src: assets.Journeytothemisteriousisland, alt: "Journey to the misterious island" },
+    { src: assets.Rimoftheworldjpeg, alt: "Rim of the worldjpeg" },
+    { src: assets.themazerunner, alt: "the maze runner" },
+    { src: assets.Thetomorrowwar, alt: "The tomorrow war" },
+    { src: assets.Tron, alt: "Tron" },
+    { src: assets.Twisters, alt: "Twisters" },
+    { src: assets.Worldwarz, alt: "World war z " },
+    { src: assets.fordvsfararri, alt: "ford vs fararri " },
+    { src: assets.myoldschool, alt: "my old school" },
+    { src: assets.searchingforsugarman, alt: "searching for sugarman" },
+    { src: assets.shinkers, alt: "shinkers " },
+    { src: assets.theactofkilling, alt: "the act of killing" },
+    { src: assets.thebarkleymarathon, alt: "the barkley marathon" },
+    { src: assets.anomalisa, alt: "anomalisa" },
+    { src: assets.ernestandcelestine, alt: "ernestandcelestine" },
+    { src: assets.ilostmybody, alt: "i lost my body" },
+    { src: assets.soul, alt: "soul" },
+    { src: assets.spiceandg, alt: "spiceandg " },
+    { src: assets.theinvitation, alt: "the invitation " },
+
+
+
+  ];
+
+  // Duplicate the array to create seamless infinite scroll effect
+  const duplicatedImages = [...movieImages, ...movieImages];
+
+  return (
+    // Main container - full width with transparent background
+    <div className='w-full py-8 bg-transparent overflow-hidden relative'>
+      
+      {/* Slideshow container with top margin for title spacing */}
+      <div className="flex whitespace-nowrap mt-12">
+        {/* Framer Motion animated container */}
+   <motion.div
+ initial={{ x: 0 }}
+ animate={{ x: `-${(movieImages.length) * (144 + 16)}px` }}
+ transition={{
+   ease: "linear",
+   repeat: Infinity,
+   duration: 39,
+   repeatType: "loop"
+ }}
+ className="flex gap-4"
+>
+          {/* Map through duplicated images array */}
+          {duplicatedImages.map((movie, index) => (
+            // Individual movie card container
+            <div 
+              key={index}
+              className="flex-shrink-0 p-1 bg-gradient-to-br from-orange-300 to-orange-400 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+            >
+              {/* Movie poster image */}
+              <img
+                src={movie.src}
+                alt={movie.alt}
+                className='h-48 w-36 object-cover rounded-md shadow-lg'
+              />
+            </div>
+          ))}
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default MoviesSlideShow;
