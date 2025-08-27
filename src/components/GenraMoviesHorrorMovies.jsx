@@ -52,18 +52,7 @@ const GenraMoviesHorrorMovies = () => {
   
   ];
 
-  // Platform logos with working URLs
-  const platformLogos = {
-    "Netflix": "https://logos-world.net/wp-content/uploads/2020/04/Netflix-Logo.png",
-    "Prime Video": "https://logos-world.net/wp-content/uploads/2021/08/Amazon-Prime-Video-Logo.png", 
-    "Hulu": "https://logos-world.net/wp-content/uploads/2020/06/Hulu-Logo.png",
-    "HBO Max": "https://logos-world.net/wp-content/uploads/2022/01/HBO-Max-Logo.png",
-    "Apple TV+": "https://logos-world.net/wp-content/uploads/2021/08/Apple-TV-Logo.png",
-    "Paramount+": "https://logos-world.net/wp-content/uploads/2021/08/Paramount-Plus-Logo.png",
-    "Disney+": "https://logos-world.net/wp-content/uploads/2020/06/Disney-Plus-Logo.png",
-    "Vudu": "https://logos-world.net/wp-content/uploads/2020/06/Vudu-Logo.png",
-    "Peacock": "https://logos-world.net/wp-content/uploads/2021/08/Peacock-Logo.png"
-  };
+
 
   return (
     <div className="relative min-h-screen w-screen text-white overflow-x-hidden">
