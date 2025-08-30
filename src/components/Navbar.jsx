@@ -43,16 +43,13 @@ const Navbar = ({ onGenraClick }) => {
         />
       </div>
            
-      {/* Right Section - Favorite Button */}
-      {/* Fixed: Removed w-8 constraint that was causing overflow */}
+      {/* Right Section - Find Button */}
       <div className='flex items-center'>
-        <button 
-          onClick={handleFavouriteClick} // Add onClick handler
-          className='rounded-full border border-white/30 transition-all duration-300 px-6 py-2 cursor-pointer hover:bg-white/10 hover:border-white/60 hover:scale-105 backdrop-blur-sm bg-black/20'>
-          {/* Gradient text for favorite button */}
-          <span className='bg-gradient-to-r from-orange-500 via-orange-400 to-yellow-300 bg-clip-text text-transparent font-medium'>
-            Favourite
-          </span>
+        <button
+          onClick={onGenraClick} // Add onClick handler
+          className='px-4 py-1.5 bg-transparent border border-orange-400 text-orange-400 font-medium text-sm rounded hover:bg-orange-400 hover:text-black transition-all duration-300 tracking-wide'
+        >
+          Log in
         </button>
       </div>
     </div>
