@@ -12,6 +12,7 @@ import GenraPageMovies from '../components/GenraPageMovies';
 import GenraPageSeries from '../components/GenraPageSeries';
 // Asset imports
 import { assets } from '../assets/assets';
+import LoginPage from '../components/LoginPage';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -114,6 +115,8 @@ const Home = () => {
       {/* Main Content Stack */}
       {/* Navigation bar with genre and favorite buttons */}
       <Navbar onGenraClick={handleGenraClick} />
+
+     
       
       {/* Hero section with main title */}
       <MainHeading />

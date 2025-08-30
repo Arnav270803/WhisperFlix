@@ -15,6 +15,7 @@ import GenraMoviesAnimationMovies from './components/GenraMoviesAnimationMovies'
 import GenraMoviesDocumentaryMovies from './components/GenraMoviesDocumentaryMovies';
 import GenraMoviesSifiMovies from './components/GenraMoviesSifiMovies';
 import GenraMoviesCreepyMovies from './components/GenraMoviesCreepyMovies';
+import LoginPage from './components/LoginPage';
 
 const App = () => {
   return (
@@ -34,7 +35,7 @@ const App = () => {
       <Route path="/movies/documentary" element={<GenraMoviesDocumentaryMovies />}/>
       <Route path="/movies/scifi" element={<GenraMoviesSifiMovies />}/>
       <Route path="/movies/creepy" element={<GenraMoviesCreepyMovies />}/>
-         
+       <Route path="/LoginPage" element={<LoginPage />} />  
       {/* Add more routes here as you create more pages */}
     </Routes>
   );

@@ -6,9 +6,8 @@ import { assets } from '../assets/assets';
 const Navbar = ({ onGenraClick }) => {
   const navigate = useNavigate(); // Add this hook
 
-  // Add handler for favourite button click
-  const handleFavouriteClick = () => {
-    navigate('/favourite');
+  const handleLoginPage = () => {
+    navigate('/LoginPage');
   };
 
   return (
@@ -43,13 +42,20 @@ const Navbar = ({ onGenraClick }) => {
         />
       </div>
            
-      {/* Right Section - Find Button */}
+      {/* Right Section - Professional Login Button */}
       <div className='flex items-center'>
         <button
-          onClick={onGenraClick} // Add onClick handler
-          className='px-4 py-1.5 bg-transparent border border-orange-400 text-orange-400 font-medium text-sm rounded hover:bg-orange-400 hover:text-black transition-all duration-300 tracking-wide'
+          onClick={handleLoginPage}
+          className='group  cursor-pointer px-5 py-2 bg-gradient-to-r from-red-950 via-amber-900 to-yellow-800 border border-amber-800/60 text-amber-100 font-medium text-sm rounded-md shadow-md shadow-amber-950/40 hover:shadow-lg hover:shadow-amber-800/30 hover:from-red-900 hover:via-amber-800 hover:to-yellow-700 hover:border-amber-700/80 hover:text-amber-50 transition-all duration-400 ease-out transform hover:scale-[1.02] tracking-normal overflow-hidden'
         >
-          Log in
+          {/* Subtle inner glow */}
+          <div className='inset-0 bg-gradient-to-r from-red-900/5 via-yellow-700/8 to-amber-700/5 opacity-0 group-hover:opacity-100 transition-opacity duration-400'></div>
+          
+          {/* Button text */}
+          <span className='relative z-10'>Login</span>
+          
+          {/* Minimal border highlight */}
+          <div className='absolute inset-0 rounded-md border border-yellow-700/20 opacity-0 group-hover:opacity-100 transition-opacity duration-400'></div>
         </button>
       </div>
     </div>
