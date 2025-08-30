@@ -64,6 +64,7 @@ import thegift from './thegift.jpeg'
 import Arrival from './Arrival.webp'
 import dhamar from './dhamar.jpg'
 import jericho from './jericho.jpeg'
+import cross_icon from './cross_icon.svg'
 
 export const assets={
     Logo,
@@ -117,6 +118,6 @@ export const assets={
     ernestandcelestine,ilostmybody,soul,spiceandg,
     killingthemsoftlypeg, ozark,peakyblinders,
     supernatural,theoa,hemlockgrove,stationeleven,intothenight,fallingskies,thelastship,thegift,Arrival,
-    dhamar,jericho,
+    dhamar,jericho,cross_icon
 
 }
