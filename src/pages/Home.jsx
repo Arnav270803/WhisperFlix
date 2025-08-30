@@ -1,5 +1,5 @@
 // Home.jsx - Home page component with movie and series categories
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // Component imports
 import Navbar from '../components/Navbar';
@@ -10,12 +10,16 @@ import SeriesSlideShow from '../components/SeriesSlideShow';
 import GenraPage from '../components/GenraPage';
 import GenraPageMovies from '../components/GenraPageMovies';
 import GenraPageSeries from '../components/GenraPageSeries';
-// Asset imports
 import { assets } from '../assets/assets';
 import LoginPage from '../components/LoginPage';
+import { AppContext} from '../context/AppContext';
+
 
 const Home = () => {
   const navigate = useNavigate();
+
+    const { showLogin } = useContext(AppContext);
+
   
   // State to control which modal is visible
   const [showGenra, setShowGenra] = useState(false);
@@ -116,7 +120,7 @@ const Home = () => {
       {/* Navigation bar with genre and favorite buttons */}
       <Navbar onGenraClick={handleGenraClick} />
 
-     
+     {showLogin && <LoginPage />}
       
       {/* Hero section with main title */}
       <MainHeading />

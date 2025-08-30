@@ -2,9 +2,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Add this import
 import { assets } from '../assets/assets';
+import { AppContext } from '../context/AppContext';
+
 
 const Navbar = ({ onGenraClick }) => {
   const navigate = useNavigate(); // Add this hook
+
+  
 
   const handleLoginPage = () => {
     navigate('/LoginPage');
